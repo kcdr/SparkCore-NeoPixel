@@ -848,8 +848,8 @@ void Adafruit_NeoPixel::setPixelColor(
         *p = g;
         break;
       case SK6812RGBW: // SK6812RGBW is RGBW order
-        *p++ = r;
         *p++ = g;
+        *p++ = r;
         *p++ = b;
         *p = w;
         break;
@@ -895,8 +895,8 @@ void Adafruit_NeoPixel::setPixelColor(uint16_t n, uint32_t c) {
         break;
       case SK6812RGBW: { // SK6812RGBW is RGBW order
           uint8_t w = (uint8_t)(c >> 24);
-          *p++ = r;
           *p++ = g;
+          *p++ = r;
           *p++ = b;
           *p = brightness ? ((w * brightness) >> 8) : w;
         }
